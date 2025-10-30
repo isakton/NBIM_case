@@ -34,4 +34,5 @@ cache/*.json
 Thumbs.db
 
 # Data (optional - might want to commit the test CSVs)
-# data/*.csv
+# data/*.csvtest_api.py
+test_run.py

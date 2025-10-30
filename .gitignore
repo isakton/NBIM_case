@@ -12,6 +12,9 @@ env/
 venv/
 ENV/
 .venv
+test_api.py
+test_run.py
+
 
 # Jupyter
 .ipynb_checkpoints/

@@ -206,7 +206,7 @@ def find_breaks(nbim_df: pd.DataFrame, custody_df: pd.DataFrame) -> List[Break]:
 def print_breaks_summary(breaks: List[Break]) -> None:
     """Print a formatted summary of all breaks."""
     if not breaks:
-        print("No breaks found - perfect reconciliation!")
+        print("No breaks found, perfect reconciliation")
         return
     
     print(f"\n{'='*80}")

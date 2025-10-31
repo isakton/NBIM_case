@@ -268,8 +268,17 @@ Severity Guidelines:
         
         # Parse JSON response
         try:
-            classification = json.loads(response['content'])
-        except:
+            # Remove any markdown code blocks if present
+            content = response['content'].strip()
+            if content.startswith('```'):
+                # Extract content between code blocks
+                content = content.split('```')[1]
+                if content.startswith('json'):
+                    content = content[4:]
+            content = content.strip()
+            
+            classification = json.loads(content)
+        except Exception as e:
             # Fallback if JSON parsing fails
             classification = {
                 'severity': 'MEDIUM',
